@@ -57,9 +57,8 @@ stage_events_to_redshift = StageToRedshiftOperator(
     redshift_conn_id="redshift",
     table = "staging_events",
     s3_bucket="udacity-dend",
-    s3_key="log_data" ,
+    s3_key="log_data/{execution_date.year}/{execution_date.month}/{ds}-events.json
     copy_json_option='s3://udacity-dend/log_json_path.json'
-    #s3_key="log_data/{execution_date.year}/{execution_date.month}/{ds}-events.json"
     #"log_data/{execution_date.year}/{execution_date.month}/" 
     #"log_data/{execution_date.year}/{execution_date.month}/*.json" #execution_date = today's date?
     
